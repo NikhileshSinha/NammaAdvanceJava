@@ -12,7 +12,7 @@ enum SubjectCredit{
 }
 
 //Main class
-public class EnumsDemo {
+public class EnumDemo2 {
     public static void main(String[] args) {
         //For loop which prints Credits too
         for(SubjectCredit sub : SubjectCredit.values()){
