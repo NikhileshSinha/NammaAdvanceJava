@@ -1,19 +1,22 @@
 //Constructor emun
-enum SubjectMarks{
-    AdvanceJava(59), IoT(67), Python(90), CloudComputer(99);
-    private final int marks;
-    SubjectMarks(int i){
-        marks=i;
+enum SubjectCredit{
+    AdvanceJava(3), IoT(3), Python(3), CloudComputer(3), IoTLab, PythonLab;
+    private final int credit;
+    SubjectCredit(int credit){
+        this.credit = credit;
     }
-    int getMarks(){return marks;}
+    SubjectCredit(){
+        this.credit = 2;
+    }
+    int getCredit(){return credit;}
 }
 
 //Main class
-public class EnumsDemo2 {
+public class EnumsDemo {
     public static void main(String[] args) {
-        //For loop which prints marks too
-        for(SubjectMarks sub : SubjectMarks.values()){
-            System.out.println(sub.getMarks());
+        //For loop which prints Credits too
+        for(SubjectCredit sub : SubjectCredit.values()){
+            System.out.println(sub+" : "+sub.getCredit());
         }
     }
 }
