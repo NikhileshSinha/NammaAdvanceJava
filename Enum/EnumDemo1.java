@@ -4,7 +4,7 @@ enum Subject{
 }
 
 //Main class
-public class EnumsDemo {
+public class EnumsDemo1 {
     public static void main(String[] args) {
         //For loop which prints enum member
         for(Subject sub : Subject.values()){
