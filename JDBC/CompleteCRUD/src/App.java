@@ -107,13 +107,7 @@ public class App {
                         System.out.println("Wrong Input!");
                         break;
                 }
-            }
-            // String insert = "insert into Student values ('Nikhilesh','Sinha')";
-            // String insert1 = "insert into Student values ('Varsha','Pawar')";
-            // String update = "update Student set first='NIKHILESH' where first='Nikhilesh'";
-            // String delete = "delete from Student  where first='Varsha'";
-            // stmt.executeUpdate(delete);
-            // System.out.println("Executed");        
+            }    
         } 
         catch (SQLException e) {
             e.printStackTrace();
