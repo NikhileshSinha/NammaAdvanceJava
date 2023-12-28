@@ -25,7 +25,7 @@ public class App {
                 System.out.println("Table Student is already created\n");
             }       
             while (true) {
-                System.out.println("Enter your choice:\n1. Insert new value\n2. Update value by USN\n3. Delete value by USN\n9. Exit the loop");
+                System.out.println("Enter your choice:\n1. Insert new value\n2. Update value by USN\n3. Delete value by USN\n4. Print Table\n9. Exit the loop");
                 Scanner s = new Scanner(System.in);
                 int choice = s.nextInt();
                 switch (choice) {
@@ -81,11 +81,30 @@ public class App {
                             e.printStackTrace();
                         }
                         break;
+                    case 4:
+                        //TODO: dekhna
+                        //Statement stmt1=conn.createStatement();
+                        ResultSet rs=stmt.executeQuery("select * from Student");
+                        if(rs.next()){
+                            System.out.println("USN\t\tFirst name\tSecond Name\tCourse");
+                            do{
+                                String usn=rs.getString(1);
+                                String fn=rs.getString(2);
+                                String ln=rs.getString(3);
+                                String c=rs.getString(4);
+                                System.out.println(usn+"\t"+fn+"\t"+ln+"\t\t"+c);
+                            }
+                            while(rs.next());
+                        }
+                        else
+                            System.out.println("Record(s) are not available in database.");
+                        break;
                     case 9:
                         System.exit(1);
                         break;
                 
                     default:
+                        System.out.println("Wrong Input!");
                         break;
                 }
             }
